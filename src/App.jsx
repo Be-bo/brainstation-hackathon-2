@@ -53,87 +53,103 @@ function App() {
     }
   };
 
+  const handleSubmitForm = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="App">
       <h1>Career Guru</h1>
-      <section>
-        <label>Skills</label>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleChange}
-          onKeyPress={handleEnterKey}
-        />
-        <ul>
-          {valueList.map((value, index) => (
-            <li key={index}>{value}</li>
-          ))}
-        </ul>
-      </section>
 
-      <section>
-        <label>Work Experience</label>
-        <input
-          type="text"
-          value={experienceValue}
-          onChange={handleExperienceChange}
-          onKeyPress={handleExperienceEnterKey}
-        />
-        <ul>
-          {experienceList.map((value, index) => (
-            <li key={index}>{value}</li>
-          ))}
-        </ul>
-      </section>
+      <form onSubmit={handleSubmitForm}>
+        <section>
+          <label>Skills</label>
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleChange}
+            onKeyPress={handleEnterKey}
+          />
+          <ul>
+            {valueList.map((value, index) => (
+              <li key={index}>{value}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section>
-        <label>Education</label>
-        <input
-          type="text"
-          value={educationValue}
-          onChange={handleEducationChange}
-          onKeyPress={handleEducationEnterKey}
-        />
-        <ul>
-          {educationList.map((value, index) => (
-            <li key={index}>{value}</li>
-          ))}
-        </ul>
-      </section>
+        <section>
+          <label>Work Experience</label>
+          <input
+            type="text"
+            value={experienceValue}
+            onChange={handleExperienceChange}
+            onKeyPress={handleExperienceEnterKey}
+          />
+          <ul>
+            {experienceList.map((value, index) => (
+              <li key={index}>{value}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section>
-        <label>Interests</label>
-        <input
-          type="text"
-          value={interestsValue}
-          onChange={handleInterestsChange}
-          onKeyPress={handleInterestsEnterKey}
-        />
-        <ul>
-          {interestsList.map((value, index) => (
-            <li key={index}>{value}</li>
-          ))}
-        </ul>
-      </section>
+        <section>
+          <label>Education</label>
+          <input
+            type="text"
+            value={educationValue}
+            onChange={handleEducationChange}
+            onKeyPress={handleEducationEnterKey}
+          />
+          <ul>
+            {educationList.map((value, index) => (
+              <li key={index}>{value}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section>
-        <label>Desired Role</label>
-        <input type="text" name="role" />
-      </section>
+        <section>
+          <label>Interests</label>
+          <input
+            type="text"
+            value={interestsValue}
+            onChange={handleInterestsChange}
+            onKeyPress={handleInterestsEnterKey}
+          />
+          <ul>
+            {interestsList.map((value, index) => (
+              <li key={index}>{value}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section>
-        <h2>Type of Response:</h2>
-        <div>
-          <input type="radio" name="response" value="skillsToLearn" />
-          <label for="skillsToLearn">What skills should I learn next?</label>
-        </div>
-        <div>
-          <input type="radio" name="response" value="skillsMissing" />
-          <label for="skillsMissing">
-            What crucial skills and experience am I missing?
-          </label>
-        </div>
-      </section>
+        <section>
+          <label>Desired Role</label>
+          <input type="text" name="role" />
+        </section>
+
+        <section>
+          <h3>Type of Response:</h3>
+          <div>
+            <input type="radio" name="response" value="skillsToLearn" />
+            <label for="skillsToLearn">What skills should I learn next?</label>
+          </div>
+          <div>
+            <input type="radio" name="response" value="skillsMissing" />
+            <label for="skillsMissing">
+              What crucial skills and experience am I missing?
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="response" value="skillsForJob" />
+            <label for="skillsForJob">
+              What do I need to do to maximize my chances of getting a job right
+              now?
+            </label>
+          </div>
+        </section>
+
+        <button>Submit</button>
+      </form>
     </div>
   );
 }
