@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Career Guru</h1>
+      <h1>CAREER GURU</h1>
 
       <form onSubmit={handleSubmitForm}>
         <section>
@@ -70,9 +70,11 @@ function App() {
             onChange={handleChange}
             onKeyPress={handleEnterKey}
           />
-          <ul>
+          <ul className="list">
             {valueList.map((value, index) => (
-              <li key={index}>{value}</li>
+              <li className="list-box" key={index}>
+                {value}
+              </li>
             ))}
           </ul>
         </section>
@@ -85,9 +87,11 @@ function App() {
             onChange={handleExperienceChange}
             onKeyPress={handleExperienceEnterKey}
           />
-          <ul>
+          <ul className="list">
             {experienceList.map((value, index) => (
-              <li key={index}>{value}</li>
+              <li className="list-box" key={index}>
+                {value}
+              </li>
             ))}
           </ul>
         </section>
@@ -100,9 +104,11 @@ function App() {
             onChange={handleEducationChange}
             onKeyPress={handleEducationEnterKey}
           />
-          <ul>
+          <ul className="list">
             {educationList.map((value, index) => (
-              <li key={index}>{value}</li>
+              <li className="list-box" key={index}>
+                {value}
+              </li>
             ))}
           </ul>
         </section>
@@ -115,9 +121,11 @@ function App() {
             onChange={handleInterestsChange}
             onKeyPress={handleInterestsEnterKey}
           />
-          <ul>
+          <ul className="list">
             {interestsList.map((value, index) => (
-              <li key={index}>{value}</li>
+              <li className="list-box" key={index}>
+                {value}
+              </li>
             ))}
           </ul>
         </section>
