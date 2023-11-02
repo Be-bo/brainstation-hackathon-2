@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+
 .App {
+  background-color: white;
   text-align: center;
   font-family: Arial, sans-serif;
   max-width: 600px;
@@ -12,6 +15,10 @@
     font-size: 24px;
     margin-bottom: 20px;
     font-size: 50px;
+  }
+  img {
+    width: 15vw;
+    margin: auto;
   }
   section {
     margin-bottom: 20px;
@@ -45,7 +52,17 @@
     }
   }
 }
+.outerbox {
+  background-image: url(./image/guru.jpeg);
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
 
+h1 {
+  font-family: "Gemunu Libre", sans-serif;
+  font-size: 3rem;
+}
 .list {
   display: flex;
   &-box {
